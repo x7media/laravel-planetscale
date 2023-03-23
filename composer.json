@@ -1,0 +1,41 @@
+{
+    "name": "x7media/laravel-planetscale",
+    "description": "A package for managing Laravel database migrations with Planetscale databases.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "X7 Media, LLC",
+            "email": "info@x7media.com",
+            "homepage": "http://x7media.com"
+        }
+    ],
+    "homepage": "https://github.com/x7media/laravel-planetscale",
+    "keywords": [
+        "Laravel",
+        "LaravelPlanetscale"
+    ],
+    "require": {
+        "illuminate/support": "~9"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~9.0",
+        "orchestra/testbench": "~7"
+    },
+    "autoload": {
+        "psr-4": {
+            "X7media\\LaravelPlanetscale\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "X7media\\LaravelPlanetscale\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "X7media\\LaravelPlanetscale\\LaravelPlanetscaleServiceProvider"
+            ]
+        }
+    }
+}

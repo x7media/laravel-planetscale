@@ -1,0 +1,125 @@
+{
+    "id": "xxxxxxxxxxxx",
+    "type": "DeployRequest",
+    "actor": {
+        "id": "xxxxxxxxxxxx",
+        "type": "ServiceToken",
+        "display_name": "Test User's Service Token xxxxxxxxxxxx",
+        "avatar_url": "https://app.planetscale.com/gravatar-fallback.png"
+    },
+    "closed_by": {
+        "id": "xxxxxxxxxxxx",
+        "type": "ServiceToken",
+        "display_name": "Test User's Service Token xxxxxxxxxxxx",
+        "avatar_url": "https://app.planetscale.com/gravatar-fallback.png"
+    },
+    "branch": "artisan-migrate-0000000000",
+    "branch_deleted": false,
+    "branch_deleted_by": null,
+    "branch_deleted_at": null,
+    "into_branch": "main",
+    "into_branch_sharded": false,
+    "into_branch_shard_count": 0,
+    "approved": false,
+    "state": "closed",
+    "deployment_state": "complete",
+    "num_comments": 0,
+    "deployment": {
+        "id": "xxxxxxxxxxxx",
+        "type": "Deployment",
+        "into_branch": "main",
+        "deploy_request_number": 1,
+        "actor": {
+            "id": "boo",
+            "type": "User",
+            "display_name": "Ghost",
+            "avatar_url": "https://app.planetscale.com/gravatar-fallback.png"
+        },
+        "cutover_actor": {
+            "id": "boo",
+            "type": "User",
+            "display_name": "Ghost",
+            "avatar_url": "https://app.planetscale.com/gravatar-fallback.png"
+        },
+        "cancelled_actor": {
+            "id": "boo",
+            "type": "User",
+            "display_name": "Ghost",
+            "avatar_url": "https://app.planetscale.com/gravatar-fallback.png"
+        },
+        "schema_last_updated_at": "2023-03-23T00:05:56.741Z",
+        "preceding_deployments": [],
+        "deploy_operations": [
+            {
+                "id": "xxxxxxxxxxxx",
+                "type": "DeployOperation",
+                "state": "complete",
+                "keyspace_name": "laravel-test",
+                "table_name": "pscale_test",
+                "operation_name": "CREATE",
+                "eta_seconds": 0,
+                "progress_percentage": 100,
+                "deploy_error_docs_url": null,
+                "ddl_statement": "CREATE TABLE `pscale_test` (\n\t`id` bigint unsigned NOT NULL AUTO_INCREMENT,\n\t`created_at` timestamp NULL,\n\t`updated_at` timestamp NULL,\n\tPRIMARY KEY (`id`)\n) ENGINE InnoDB,\n  CHARSET utf8mb4,\n  COLLATE utf8mb4_unicode_ci",
+                "syntax_highlighted_ddl": "<div class=\"line line-1\"><span class=\"k\">CREATE</span> <span class=\"k\">TABLE</span> <span class=\"nv\">`pscale_test`</span> <span class=\"p\">(</span></div><div class=\"line line-2\">\t<span class=\"nv\">`id`</span> <span class=\"nb\">bigint</span> <span class=\"nb\">unsigned</span> <span class=\"k\">NOT</span> <span class=\"k\">NULL</span> <span class=\"n\">AUTO_INCREMENT</span><span class=\"p\">,</span></div><div class=\"line line-3\">\t<span class=\"nv\">`created_at`</span> <span class=\"nb\">timestamp</span> <span class=\"k\">NULL</span><span class=\"p\">,</span></div><div class=\"line line-4\">\t<span class=\"nv\">`updated_at`</span> <span class=\"nb\">timestamp</span> <span class=\"k\">NULL</span><span class=\"p\">,</span></div><div class=\"line line-5\">\t<span class=\"k\">PRIMARY</span> <span class=\"k\">KEY</span> <span class=\"p\">(</span><span class=\"nv\">`id`</span><span class=\"p\">)</span></div><div class=\"line line-6\"><span class=\"p\">)</span> <span class=\"n\">ENGINE</span> <span class=\"n\">InnoDB</span><span class=\"p\">,</span></div><div class=\"line line-7\">  <span class=\"n\">CHARSET</span> <span class=\"n\">utf8mb4</span><span class=\"p\">,</span></div><div class=\"line line-8\">  <span class=\"k\">COLLATE</span> <span class=\"n\">utf8mb4_unicode_ci</span></div>",
+                "created_at": "2023-03-23T00:06:18.463Z",
+                "updated_at": "2023-03-23T00:06:25.599Z",
+                "can_drop_data": false,
+                "table_recently_used": false,
+                "table_recently_used_at": null,
+                "deploy_errors": ""
+            }
+        ],
+        "deploy_operation_summaries": [
+            {
+                "id": "xxxxxxxxxxxx",
+                "type": "DeployOperationSummary",
+                "created_at": "2023-03-23T00:06:18.463Z",
+                "deploy_errors": [],
+                "ddl_statement": "CREATE TABLE `pscale_test` (\n\t`id` bigint unsigned NOT NULL AUTO_INCREMENT,\n\t`created_at` timestamp NULL,\n\t`updated_at` timestamp NULL,\n\tPRIMARY KEY (`id`)\n) ENGINE InnoDB,\n  CHARSET utf8mb4,\n  COLLATE utf8mb4_unicode_ci",
+                "eta_seconds": 0,
+                "keyspace_name": "laravel-test",
+                "operation_name": "CREATE",
+                "progress_percentage": 100,
+                "state": "complete",
+                "syntax_highlighted_ddl": "<div class=\"line line-1\"><span class=\"k\">CREATE</span> <span class=\"k\">TABLE</span> <span class=\"nv\">`pscale_test`</span> <span class=\"p\">(</span></div><div class=\"line line-2\">\t<span class=\"nv\">`id`</span> <span class=\"nb\">bigint</span> <span class=\"nb\">unsigned</span> <span class=\"k\">NOT</span> <span class=\"k\">NULL</span> <span class=\"n\">AUTO_INCREMENT</span><span class=\"p\">,</span></div><div class=\"line line-3\">\t<span class=\"nv\">`created_at`</span> <span class=\"nb\">timestamp</span> <span class=\"k\">NULL</span><span class=\"p\">,</span></div><div class=\"line line-4\">\t<span class=\"nv\">`updated_at`</span> <span class=\"nb\">timestamp</span> <span class=\"k\">NULL</span><span class=\"p\">,</span></div><div class=\"line line-5\">\t<span class=\"k\">PRIMARY</span> <span class=\"k\">KEY</span> <span class=\"p\">(</span><span class=\"nv\">`id`</span><span class=\"p\">)</span></div><div class=\"line line-6\"><span class=\"p\">)</span> <span class=\"n\">ENGINE</span> <span class=\"n\">InnoDB</span><span class=\"p\">,</span></div><div class=\"line line-7\">  <span class=\"n\">CHARSET</span> <span class=\"n\">utf8mb4</span><span class=\"p\">,</span></div><div class=\"line line-8\">  <span class=\"k\">COLLATE</span> <span class=\"n\">utf8mb4_unicode_ci</span></div>",
+                "table_name": "pscale_test",
+                "table_recently_used_at": null,
+                "can_drop_data": false,
+                "table_recently_used": false,
+                "operations": [
+                    {
+                        "id": "xxxxxxxxxxxx",
+                        "shard": "",
+                        "state": "complete",
+                        "progress_percentage": 100,
+                        "eta_seconds": 0
+                    }
+                ]
+            }
+        ],
+        "deployable": true,
+        "cutover_expiring": false,
+        "lint_errors": [],
+        "deployment_revert_request": null,
+        "auto_cutover": true,
+        "created_at": "2023-03-23T00:05:53.946Z",
+        "cutover_at": "2023-03-23T00:06:18.755Z",
+        "deploy_check_errors": null,
+        "finished_at": "2023-03-23T00:06:25.730Z",
+        "queued_at": "2023-03-23T00:06:05.611Z",
+        "ready_to_cutover_at": "2023-03-23T00:06:18.531Z",
+        "started_at": "2023-03-23T00:06:17.172Z",
+        "state": "complete",
+        "submitted_at": "2023-03-23T00:06:06.131Z",
+        "updated_at": "2023-03-23T00:06:25.953Z"
+    },
+    "html_url": "https://app.planetscale.com/laravel-test/laravel-test/deploy-requests/1",
+    "number": 1,
+    "notes": null,
+    "html_body": "",
+    "created_at": "2023-03-23T00:05:53.877Z",
+    "updated_at": "2023-03-23T00:06:25.964Z",
+    "closed_at": "2023-03-23T00:06:25.793Z",
+    "deployed_at": "2023-03-23T00:06:25.730Z"
+}

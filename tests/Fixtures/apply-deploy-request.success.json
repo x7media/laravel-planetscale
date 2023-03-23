@@ -1,0 +1,30 @@
+{
+    "id": "xxxxxxxxxxxx",
+    "type": "DeployRequest",
+    "actor": {
+        "id": "xxxxxxxxxxxx",
+        "type": "ServiceToken",
+        "display_name": "Test User's Service Token xxxxxxxxxxxx",
+        "avatar_url": "https://app.planetscale.com/gravatar-fallback.png"
+    },
+    "closed_by": null,
+    "branch": "artisan-migrate-0000000000",
+    "branch_deleted": false,
+    "branch_deleted_by": null,
+    "branch_deleted_at": null,
+    "into_branch": "main",
+    "into_branch_sharded": false,
+    "into_branch_shard_count": 0,
+    "approved": false,
+    "state": "open",
+    "deployment_state": "queued",
+    "num_comments": 0,
+    "html_url": "https://app.planetscale.com/laravel-test/laravel-test/deploy-requests/1",
+    "number": 1,
+    "notes": null,
+    "html_body": "",
+    "created_at": "2023-03-23T00:05:53.877Z",
+    "updated_at": "2023-03-23T00:05:59.830Z",
+    "closed_at": null,
+    "deployed_at": null
+}

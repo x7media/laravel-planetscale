@@ -1,0 +1,44 @@
+{
+    "id": "xxxxxxxxxxxx",
+    "type": "Branch",
+    "name": "artisan-migrate-0000000000",
+    "created_at": "2023-03-23T00:04:35.651Z",
+    "updated_at": "2023-03-23T00:04:35.651Z",
+    "restore_checklist_completed_at": null,
+    "access_host_url": "xxxxxxxxxxxx.us-east-3.psdb.cloud",
+    "schema_last_updated_at": "2023-03-23T00:04:35.651Z",
+    "mysql_address": "us-east.connect.psdb.cloud",
+    "mysql_provider_address": "aws.connect.psdb.cloud",
+    "initial_restore_id": null,
+    "mysql_edge_address": "aws.connect.psdb.cloud",
+    "ready": false,
+    "production": false,
+    "safe_migrations": false,
+    "sharded": false,
+    "shard_count": 0,
+    "stale_schema": false,
+    "actor": {
+        "id": "xxxxxxxxxxxx",
+        "type": "User",
+        "display_name": "Test User",
+        "avatar_url": "https://app.planetscale.com/gravatar-fallback.png"
+    },
+    "restored_from_branch": null,
+    "html_url": "https://app.planetscale.com/laravel-test/laravel-test/artisan-migrate-0000000000",
+    "url": "https://api.planetscale.com/v1/organizations/laravel-test/databases/laravel-test/branches/artisan-migrate-0000000000",
+    "region": {
+        "id": "xxxxxxxxxxxx",
+        "type": "Region",
+        "provider": "AWS",
+        "enabled": true,
+        "public_ip_addresses": [
+            "0.0.0.0",
+            "300.310.320.330"
+        ],
+        "display_name": "AWS us-east-1",
+        "location": "Northern Virginia",
+        "slug": "us-east"
+    },
+    "multiple_admins_required_for_demotion": false,
+    "parent_branch": "main"
+}
