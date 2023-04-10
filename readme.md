@@ -49,7 +49,7 @@ Optionally you can publish the config:
 php artisan vendor:publish --tag=laravel-planetscale-config
 ```
 
-Then customize the values in the config. **NOTE:** If you take this approach we *STRONGLY RECOMMEND* that you still use enviroment varibles or some other secrets storage at least for your service token and service token ID for security.
+Then customize the values in the config. **NOTE:** If you take this approach we *STRONGLY RECOMMEND* that you still use enviroment variables or some other secrets storage at least for your service token and service token ID for security.
 
 5. Replase the `php artisan migrate` command in your deployment script or process with this:
 
@@ -63,17 +63,17 @@ php artisan pscale:migrate
 
 ### Why is this necessary?
 
-PlanetScale has alot of advantages when using it as your application's production database. However it handles your database and schema migrations in a somewhat unusual way.
+PlanetScale has a lot of advantages when using it as your application's production database. When [safe migrations](https://planetscale.com/docs/concepts/safe-migrations) are enabled, you cannot run direct schema changes against your production database branch. Instead, you use the branching flow and Vitess's [non-blocking schema migration](https://planetscale.com/docs/concepts/nonblocking-schema-changes) tooling to run your database migrations safely.
 
-It uses branches for your database. A branch can be production or development. You'll want to use a production branch for your app in production because that afford you extra features like automatic backups, however you cannot perform schema changes directly against a production branch. Instead you should create a new development branch based on your production branch and perform your schema changes on that than merge that back into your production branch just like you would do with your code in Git.
+This is accomplished by creating a branch of your schema, running your migrations against that branch and then opening a deploy request to have PlanetScale manage the schema migration for you in production.
 
-This package uses [PlanetScale's Public API](https://api-docs.planetscale.com/) to automate the process of creating a new development branch, connecting your app to the development branch, running your Laravel migrations on the development branch, merging that back into your production branch, and deleting the development branch.
+This package uses [PlanetScale's Public API](https://api-docs.planetscale.com/) to automate the process of creating a new development branch, connecting your app to the development branch, running your Laravel migrations on the development branch, merging that back into your production branch, and deleting the development branch. You end up with the best of both, the migration flow you are used to while also taking advantage of PlanetScale's schema migration tools.
 
 ### Are there any notable limitations to PlanetScale's branching?
 
-Yes, there is one **BIG** caveat. That is branching and merging is for *schema only*. So you will need to seperate your schema migrations from your data migrations. Use this to run your schema migrations and run your data migrations seperatly against your production branch.
+Yes, there is one **BIG** caveat. That is branching and merging is for *schema only*. So you will need to separate your schema migrations from your data migrations. Use this to run your schema migrations and run your data migrations separately against your production branch.
 
-An alternative method is to demote your production branch back to a development branch, then you can mix schema and data migrations. Then when that is finished promote the branch back to a production branch. But that is currently a manaual process. I have however made a request with the PlanetScale team to make a slight change to their API that would allow this demote-promote process to be automated, and if that change is made I will update this package. However I ultimately have no control over if or when that will become possible.
+An alternative method is to disable [safe migrations](https://planetscale.com/docs/concepts/safe-migrations) on your production branch, then you can mix schema and data migrations. Then when that is finished re-enable safe migrations to return to using the safe schema change tools.
 
 ## Change log
 
